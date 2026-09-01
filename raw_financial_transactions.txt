@@ -1,0 +1,41 @@
+﻿transaction_id,date,account_id,category,description,amount,currency,status
+1,1/2/2025,CHK-001,rent,January rent payment,"$1,250.00 ",USD,cleared
+2,1/3/2025,CHK-001,Groceries,Supermarket run,154.23,USD,cleared
+3,1/3/2025,CC-100,Dining,Team lunch,($48.90),USD,cleared
+4,1/4/2025,CHK-001,utilities,Electric bill,N/A,USD,pending
+5,1/5/2025,CC-100,Travel,Taxi to client site,$32.10 ,USD,cleared
+6,1/6/2025,CC-100,travel,Hotel booking,$420.00 ,USD,cleared
+7,1/6/2025,CC-100,TRAVEL,Flight to NYC,$612.45 ,USD,cleared
+8,1/7/2025,SAV-010,Interest,Monthly interest,3.57,USD,cleared
+9,1/8/2025,CHK-001,Groceries,Warehouse club,$210.00 ,USD,cleared
+10,1/9/2025,CHK-001,Rent,Late fee,35,USD,cleared
+11,1/9/2025,CHK-001,rent,Correction entry,-35,USD,cleared
+12,1/10/2025,CC-100,Dining,Client dinner,$128.40 ,USD,pending
+13,1/11/2025,CC-100,Dining,Coffee shop,7.15,USD,cleared
+14,1/11/2025,CHK-001,Salary,Monthly payroll,"4,500.00",USD,cleared
+15,1/12/2025,CHK-001,Utilities,Water bill,$45.33 ,USD,cleared
+16,2025-13-01,CHK-001,Utilities,Invalid date example,$60.00 ,USD,cleared
+17,,CHK-001,Groceries,Missing date example,$89.77 ,USD,cleared
+18,1/13/2025,,Dining,Missing account,$25.00 ,USD,cleared
+19,1/14/2025,CHK-001,Groceries,Corner store,$15.23 ,USD,cleared
+20,1/15/2025,CHK-001,Misc,Office supplies,$58.90 ,USD,cleared
+21,1/15/2025,CHK-001,misc,Office snacks,12.34,USD,cleared
+22,1/16/2025,CC-100,Travel,Rideshare,$18.60 ,USD,cleared
+23,1/17/2025,CC-100,Dining,Takeout,$27.50 ,USD,cleared
+24,1/18/2025,SAV-010,Transfer,To checking,-500,USD,cleared
+25,1/18/2025,CHK-001,Transfer,From savings,500,USD,cleared
+26,1/19/2025,CHK-001,Fees,ATM fee,$3.00 ,USD,cleared
+27,1/20/2025,CHK-001,fees,Account maintenance fee,15,USD,cleared
+28,1/21/2025,CHK-001,Groceries,Online grocery order,$132.49 ,USD,pending
+29,1/22/2025,CHK-001,Rent,February rent scheduled,"$1,250.00 ",USD,scheduled
+30,1/22/2025,CHK-001,Rent,February rent scheduled,"$1,250.00 ",USD,scheduled
+31,1/23/2025,CC-100,Travel,Hotel incidentals,27.8,USD,cleared
+32,1/24/2025,CC-100,Dining,Room service,$42.00 ,USD,cleared
+33,1/25/2025,CHK-001,Misc,Charity donation,$100.00 ,USD,cleared
+34,1/26/2025,CHK-001,Groceries,Farmer's market,$64.12 ,USD,cleared
+35,1/27/2025,SAV-010,Interest,Bonus interest,5.1,USD,cleared
+36,1/27/2025,SAV-010,Interest,Bonus interest,5.1,USD,cleared
+37,1/28/2025,CHK-001,Rent,Adjustment,N/A,USD,pending
+38,1/29/2025,CC-100,Travel,Car rental,$210.75 ,USD,cleared
+39,1/30/2025,CHK-001,Utilities,Gas bill,$38.90 ,USD,cleared
+40,,CHK-001,Groceries,Null date example,$56.44 ,USD,cleared
