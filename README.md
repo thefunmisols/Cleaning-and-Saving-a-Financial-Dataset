@@ -1,13 +1,12 @@
 # Cleaning-and-Saving-a-Financial-Dataset Using Pandas
 A structured data-cleaning workflow using pandas
 
-In this hands-on activity, I practiced a structured data-cleaning workflow using pandas. I corrected formatting issues, fixed data types, handled missing values, and removed duplicates, then validated and exported a clean version of the dataset. 
-
-I worked with a CSV file, a simple text-based format that pandas reads and writes easily. My task was to prepare the dataset for financial analysis—clean, consistent, and ready for use.
+In this hands-on activity, I practiced a structured data-cleaning workflow using pandas. I corrected formatting issues, fixed data types, handled missing values, and removed duplicates, then validated and exported a clean version of the dataset. I worked with a CSV file, a simple text-based format that pandas reads and writes easily. My task was to prepare the dataset for financial analysis—clean, consistent, and ready for use.
 
 The objective was to use pandas to clean a messy financial dataset by applying formatting corrections, type conversions, missing-value treatment, and duplicate removal—then export a clean CSV file.
 
-Tools Used
+**Tools Used**
+
 Python 3
 
 pandas
@@ -16,9 +15,10 @@ Jupyter Notebook
 
 Provided file: financial_transactions.csv (A CSV—comma-separated values—file stored in plain text. Pandas converts it into a DataFrame with read_csv() and saves cleaned data back with to_csv().)
 
-PROCESS
+**CLEANING PROCESS**
 
-1. I Set Up My Notebook
+**1. I Set Up My Notebook**
+
 Created a new notebook named clean_financial_dataset.ipynb.
 
 Loaded pandas and read the CSV:
@@ -34,6 +34,11 @@ I ran a quick initial snapshot:
 df.head()
 df.info()
 df.isna().sum()
+
+<img width="784" height="359" alt="yes1" src="https://github.com/user-attachments/assets/208c75de-e9f6-4a1c-adc8-97aea8929b75" />
+
+<img width="752" height="437" alt="yes2" src="https://github.com/user-attachments/assets/a3eb3267-9fb4-4075-8d3f-ef823e88e53c" />
+
 
 Some of the things that looked incorrect or inconsistent were;
 
@@ -64,6 +69,8 @@ df["amount"] = (df["amount"]
 )
 df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
 
+<img width="781" height="317" alt="yes4" src="https://github.com/user-attachments/assets/fd7f2f93-f786-49bf-bfa9-e438d365bd8e" />
+
 C. I converted text-based dates into real datetimes using the function below because time series analysis wont be effectively done if date is not in the correct format.
 
 df["date"] = pd.to_datetime(df["date"], errors="coerce")
@@ -72,12 +79,16 @@ D. I standardized category labels for reliable grouping and reporting;
 
 df["category"] = df["category"].str.strip().str.lower()
 
+<img width="783" height="356" alt="yes" src="https://github.com/user-attachments/assets/8e0b7fad-3762-411a-84c3-078254a9a60e" />
+
 E. I handled missing values choosing carefully how based on context using the function below as handling missing values carelessly could affect the overall totals and distort financial metrics leading to wrong decisions.
 
 df["amount"] = df["amount"].fillna(0)
 df["missing_flag"] = df.isna().any(axis=1)
 
-I considered whether dropping rows would harm financial accuracy before doing so.
+<img width="779" height="239" alt="fire" src="https://github.com/user-attachments/assets/08486b3f-f0b5-448a-ab44-6cbd882366fe" />
+
+I considered whether dropping rows would harm financial accuracy before doing so, for the rest of the missing values(1 missing account_id and 2 dates, I would conduct further investigation to determine if they can be dropped.
 
 3. I validated the cleaned Dataset by running the functions below;
 
@@ -87,9 +98,7 @@ df.describe()
 
 df.isna().sum()
 
-
-<img width="957" height="476" alt="python, inspect" src="https://github.com/user-attachments/assets/f0e0f6b2-47c3-43ab-9152-19cf578e45e6" />
-
+<img width="749" height="427" alt="zt" src="https://github.com/user-attachments/assets/a9ab0db8-2149-40c5-8a30-a3cc4c1682e6" />
 
 From the results I confirmed:
 
@@ -107,11 +116,11 @@ all categories were consistent
    
 df.to_csv("financial_transactions_clean.csv", index=False)
 
-This wrote my cleaned DataFrame back into a CSV file, again using commas to separate columns. 
-
+This wrote my cleaned dataFrame back into a CSV file, again using commas to separate columns. 
 
 **Skills gained**
-After completing this activity, I:
+
+In this activity, I
 
 Cleaned a raw dataset using essential pandas techniques
 
